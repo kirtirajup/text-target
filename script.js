@@ -13,7 +13,7 @@ Array.from(buttons).map((btn)=>{
         else if(inner == "Lower Case"){
             string.value = string.value.toLowerCase();
         }
-        elseinner == "Clear"){
+        else{
             string.value="";
         }
     })
