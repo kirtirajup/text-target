@@ -7,7 +7,7 @@ const dark = ()=>{
         dark.innerText = "Light Mode"
         textBox.style.background = "black"
         textBox.style.color = "white"
-        localStorage.setItem("dark")
+        localStorage.setItem("dark",true)
     }
     else{
         document.body.style.background = "white"
