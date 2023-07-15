@@ -1,1 +1,51 @@
-constdark=()=>{letdark=document.getElementById("dark");lettextBox=document.getElementById("textBox");leta=dark.innerText;if(a=="DarkMode"){document.body.style.background="black"dark.innerText="LightMode"textBox.style.background="black"textBox.style.color="white"localStorage.setItem("dark")}else{document.body.style.background="white"dark.innerText="DarkMode"textBox.style.background="white"textBox.style.color="black"localStorage.setItem("dark",false)}}window.onload=()=>{leta=localStorage.getItem("dark");if(a=="true"){dark()}}letstring=document.getElementById("textBox");letsearch=document.getElementById("search").addEventListener("click",(e)=>{e.preventDefault();})letbuttons=document.getElementsByClassName("buttons");Array.from(buttons).map((btn)=>{btn.addEventListener("click",()=>{letinner=btn.innerText;if(inner=="UpperCase"){string.value=string.value.toUpperCase();}elseif(inner=="LowerCase"){string.value=string.value.toLowerCase();}elseif(inner=="ClearAll"){string.value="";}})})constcopyIt=()=>{varcopyText=document.getElementById("textBox");copyText.select();copyText.setSelectionRange(0,99999);navigator.clipboard.writeText(copyText.value);}
+const dark = ()=>{
+    let dark = document.getElementById("dark");
+    let textBox = document.getElementById("textBox");
+    let a = dark.innerText;
+    if(a == "Dark Mode"){
+        document.body.style.background = "black"
+        dark.innerText = "Light Mode"
+        textBox.style.background = "black"
+        textBox.style.color = "white"
+        localStorage.setItem("dark")
+    }
+    else{
+        document.body.style.background = "white"
+        dark.innerText = "Dark Mode"
+        textBox.style.background = "white"
+        textBox.style.color = "black"
+        localStorage.setItem("dark",false)
+    }
+}
+window.onload = ()=>{
+    let a = localStorage.getItem("dark");
+    if(a == "true"){
+        dark()
+    }
+}
+let string = document.getElementById("textBox");
+let search = document.getElementById("search").addEventListener("click",(e)=>{
+    e.preventDefault();
+})
+let buttons = document.getElementsByClassName("buttons");
+Array.from(buttons).map((btn)=>{
+    btn.addEventListener("click",()=>{
+        let inner = btn.innerText;
+        if(inner == "Upper Case"){
+            string.value = string.value.toUpperCase();
+        }
+        else if(inner == "Lower Case"){
+            string.value = string.value.toLowerCase();
+        }
+        else if(inner == "Clear All"){
+            string.value="";
+        }
+    })
+})
+
+const copyIt = ()=>{
+        var copyText = document.getElementById("textBox");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+      }
